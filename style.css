@@ -1,0 +1,33 @@
+* {
+    box-sizing: border-box; /* include padding e bordo all'interno della larghezza e dell'altezza totali dichiarate di un elemento */
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #f2ebf8;
+    font-size: 0.95em;
+    margin: 0 auto;
+}    
+
+/* spinner */
+
+/* .spinner-border {
+    border: 0 !important;
+    
+    --bs-spinner-animation-speed: 4s !important;
+} */
+
+.rotate {
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+@keyframes spin-low-stop {
+    0% { transform: rotate(0deg); }
+    50% { transform: rotate(180deg); }
+    100% { transform: rotate(360deg); }
+}

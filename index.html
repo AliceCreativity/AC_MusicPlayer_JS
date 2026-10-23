@@ -1,0 +1,105 @@
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Stile -->
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./node_modules/@fortawesome/fontawesome-free/css/all.min.css">
+
+    <title>A.C. Music player</title>
+
+</head>
+
+<body>
+    
+    <div class="d-flex flex-column justify-content-center w-100 border">
+
+        <div class="w-75 align-self-center d-flex flex-column justify-content-center bg-light 
+                    border border-dark rounded-3 my-3 py-3  text-body-secondary">         
+
+            <div class="align-self-center text-center text-black">
+                <h1>Music Player </h1>
+            </div> 
+
+            <!-- <div class="my-4 mx-auto align-self-center w-100"> -->
+
+                <div class="card col-8 align-self-center text-center overflow-hidden 
+                            border border-black rounded-3 my-4 p-2"> 
+  
+                    <!-- <h5 class="card-header"> 
+                        Header 
+                    </h5>-->
+
+                    <audio id="player">
+                        <source src="musica/DaftPunk-Technologic.mp3" type="audio/ogg">
+                    </audio>
+
+                    <div id="spinnerContainer" class="align-self-center rounded-circle mt-3 mb-2" style="height: 10rem; width: 10rem;" role="status">
+                        <img src="img/loading.png" id="spinner" class="card-img" alt="loading">
+                    </div>
+                    
+                    <div class="card-body">
+
+
+                        <h5 class="card-title text-black mb-2">
+                            Nome brano
+                        </h5>
+
+                        <p class="card-text mb-4">
+                            Autore
+                        </p>
+
+                        <div class="d-flex justify-content-center gap-3"> 
+
+                            <button class="col-3 btn btn-dark" id="btnPlay" onclick="playMusic()"> <!--  -->
+                                Play <i class="fa-solid fa-play"></i>
+                            </button>
+
+                            <button class="col-3 btn btn-dark" id="btnStop" onclick="stopMusic()">
+                                Stop <i class="fa-solid fa-stop"></i>
+                            </button>
+
+                            <button class="col-3 btn btn btn-dark" id="btnPause" onclick="pauseMusic()">
+                                Pause <i class="fa-solid fa-pause"></i>
+                            </button>
+
+                        </div>
+
+                    </div>
+                    
+                    <!-- <div class="card-footer">
+                        Footer
+                    </div> -->
+
+                </div>
+
+            <!-- <div class="my-3 mx-auto w-75 border border-black rounded-3 overflow-hidden">
+
+                <table class="table table-light table-striped mb-0" id="tabellaAlbum">
+                    <thead>
+                      <tr class="table-dark">
+                        <th scope="row">N°</th>
+                        <th scope="col text-center">Id</th>
+                        <th scope="col text-center">User</th>
+                        <th scope="col">Album</th>
+                      </tr>
+                    </thead>
+                    <tbody id="tabellaAlbumTbody">
+
+                    </tbody>
+                </table>
+
+            </div> -->
+
+        <!-- </div> -->
+
+    </div>
+    
+<script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<script src="music..js"></script>
+
+</body>
+</html>

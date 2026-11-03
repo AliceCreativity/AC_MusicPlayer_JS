@@ -7,9 +7,25 @@ const btnPlay = document.getElementById("btnPlay");
 const btnStop = document.getElementById("btnStop");
 const btnPause = document.getElementById("btnPause");
 
-function playMusic()
+btnPlay.innerHTML = "Start <i class=\"fa-solid fa-play\"></i>";
+
+/* PLAY */
+
+btnPlay.addEventListener('click', () => 
+{
+    /* pulsante Play */
+
+    btnPlay.innerHTML = "Play  <i class=\"fa-solid fa-play\"></i>";
+}, 
+{ once: true }) // scatta solo la prima volta, poi non viene più eseguita
+
+btnPlay.addEventListener('click', () => 
 {
     /* pulsanti */
+
+    btnPlay.style.cursor = "default";
+    btnStop.style.cursor = "pointer";
+    btnPause.style.cursor = "pointer";
 
     btnPlay.classList.add("btn-outline-dark");
     btnPlay.classList.remove("btn-dark");
@@ -29,11 +45,17 @@ function playMusic()
     /* player */
 
     player.play();
-}
+})
 
-function stopMusic() 
+/* STOP */
+
+btnStop.addEventListener('click', () => 
 {
     /* pulsanti */
+
+    btnStop.style.cursor = "default";
+    btnPlay.style.cursor = "pointer";
+    btnPause.style.cursor = "default";
 
     btnStop.classList.add("btn-outline-dark");
     btnStop.classList.remove("btn-dark");
@@ -44,29 +66,6 @@ function stopMusic()
     btnPause.classList.remove("btn-outline-dark");
     btnPause.classList.add("btn-dark");
     btnPause.disabled = true;
-
-    /* spinner */
-
-    /*spinnerContainer.style.setProperty("--bs-spinner-animation-speed", "8s");
-
-    setTimeout(function() {
-        spinnerContainer.style.setProperty("--bs-spinner-animation-speed", "12s");
-    }, 1000);
-
-    setTimeout(function() {
-        spinnerContainer.style.setProperty("--bs-spinner-animation-speed", "16s");
-    }, 2000);
-
-    setTimeout(function() {
-        spinnerContainer.style.transition = "opacity 0.5s ease-out";
-        spinnerContainer.style.opacity = "0";
-    }, 3000);
-
-    setTimeout(function() {
-        spinnerContainer.classList.remove("spinner-border");
-        spinnerContainer.style.transition = "opacity 0.5s ease-in";
-        spinnerContainer.style.opacity = "1";
-    }, 4000);*/
     
     spinnerContainer.classList.remove("rotate");  
 
@@ -74,11 +73,17 @@ function stopMusic()
 
     player.pause();
     player.currentTime = 0; 
-}
+})
 
-function pauseMusic() 
+/* PAUSE */
+
+btnPause.addEventListener('click', () => 
 {
     /* pulsanti */
+
+    btnPause.style.cursor = "default";
+    btnPlay.style.cursor = "pointer";
+    btnStop.style.cursor = "default";
 
     btnPause.classList.add("btn-outline-dark");
     btnPause.classList.remove("btn-dark");
@@ -97,4 +102,4 @@ function pauseMusic()
     /* player */
 
     player.pause();
-}
+})

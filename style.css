@@ -9,14 +9,6 @@ body {
     margin: 0 auto;
 }    
 
-/* spinner */
-
-/* .spinner-border {
-    border: 0 !important;
-    
-    --bs-spinner-animation-speed: 4s !important;
-} */
-
 .rotate {
     animation: spin 2s linear infinite;
 }

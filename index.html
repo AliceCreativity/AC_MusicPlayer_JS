@@ -15,7 +15,7 @@
 
 <body>
     
-    <div class="d-flex flex-column justify-content-center w-100 border">
+    <div class="d-flex flex-column justify-content-center w-100">
 
         <div class="w-75 align-self-center d-flex flex-column justify-content-center bg-light 
                     border border-dark rounded-3 my-3 py-3  text-body-secondary">         
@@ -34,7 +34,8 @@
                     </h5>-->
 
                     <audio id="player">
-                        <source src="musica/DaftPunk-Technologic.mp3" type="audio/ogg">
+                        <source src="https://pixabay.com/music/hard-rock-free-music-metal-487825/" type="audio/ogg">
+                        <!-- <source src="musica/..." type="audio/ogg"> -->
                     </audio>
 
                     <div id="spinnerContainer" class="align-self-center rounded-circle mt-3 mb-2" style="height: 10rem; width: 10rem;" role="status">
@@ -42,7 +43,6 @@
                     </div>
                     
                     <div class="card-body">
-
 
                         <h5 class="card-title text-black mb-2">
                             Nome brano
@@ -54,8 +54,8 @@
 
                         <div class="d-flex justify-content-center gap-3"> 
 
-                            <button class="col-3 btn btn-dark" id="btnPlay" onclick="playMusic()"> <!--  -->
-                                Play <i class="fa-solid fa-play"></i>
+                            <button class="col-3 btn btn-dark" id="btnPlay"> <!-- onclick="playMusic()" -->
+                                Play <!--<i class="fa-solid fa-play"></i>-->
                             </button>
 
                             <button class="col-3 btn btn-dark" id="btnStop" onclick="stopMusic()">
